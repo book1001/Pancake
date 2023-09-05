@@ -1,0 +1,429 @@
+/* Variable ================================================ */
+
+:root {
+  --scrollbar-width: 20px;
+  --scrollbar-right: 0px;
+  --scrollbar-left: 17px;
+}
+
+/* Scrollbar ================================================ */
+
+::-webkit-scrollbar { /* width */
+  width: var(--scrollbar-width);
+}
+::-webkit-scrollbar-track { /* Track */
+  background: transparent;
+}
+::-webkit-scrollbar-thumb { /* Handle */
+  background: rgb(0,0,0,1);
+  background-clip: padding-box;
+  border-top: 0px solid transparent;
+  border-right: var(--scrollbar-right) solid transparent;
+  border-bottom: 0px solid transparent;
+  border-left: var(--scrollbar-left) solid transparent;
+}
+::-webkit-scrollbar-thumb:active { /* Handle on hover */
+  /* background: rgb(0,0,0,0.24);
+  border-radius: 20px;
+  background-clip: padding-box;
+  border: 5px solid transparent; */
+}
+
+
+/* Body ================================================ */
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  /* background: #00cc00; */
+}
+
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+button {
+  color: #000000;
+}
+
+/* Divider =============================================== */
+
+hr {
+    background: #000000;
+    border: 0;
+    height: 1px;
+    display: block;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+/* Layout: image ================================================ */
+
+img {
+  padding: 0;
+  margin: 0;
+}
+
+img.center {
+  display: block;
+  margin: 0 auto;
+}
+
+img.right {
+  display: block;
+  margin-left: auto;
+}
+
+
+/* Menu: Parents ================================================ */
+
+.menu-top-left {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  margin: 0;
+  padding: 0;
+  z-index: 8;
+}
+
+.menu-top-right {
+  position: fixed;
+  top: 20px;
+  left: 130px;
+  /* right: 20px; */
+  margin: 0;
+  padding: 0;
+  z-index: 8;
+}
+
+.menu-center-left {
+  position: fixed;
+  top: 50%;
+  left: -45px;
+  /* left: -25px; */
+  margin: 0;
+  padding: 0;
+  z-index: 5;
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg); /* Safari */
+  -moz-transform: rotate(-90deg); /* Firefox */
+  -ms-transform: rotate(-90deg); /* IE 9 */
+  -o-transform: rotate(-90deg); /* Opera */
+}
+
+.menu-bottom-left {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  padding: 0;
+  z-index: 5;
+}
+
+.menu-bottom-right {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  margin: 0;
+  padding: 0;
+  z-index: 8;
+}
+
+/* .menu-bottom-center {
+  position: fixed;
+  right: auto;
+  left:auto;
+  bottom: 0;
+  transform: translate(0%, 0);
+  width: 500px;
+  z-index: 5;
+} */
+
+
+/* Menu: Children > Tools Upside Down ================================================ */
+
+.menu-index {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.menu-index:hover {
+  transform: scaleY(-1);
+  -webkit-transform: scaleY(-1);
+}
+
+
+/* Menu: Children > Top Right Buttons ================================================ */
+
+.menu-btn {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+@media (hover: hover) {
+  .menu-btn:hover {
+    transform: scaleY(-1);
+    -webkit-transform: scaleY(-1);
+  }
+}
+
+/* .menu-btn:hover {
+  transform: scaleY(-1);
+  -webkit-transform: scaleY(-1);
+} */
+
+.menu-btn-upsidedown {
+  transform: scaleY(-1);
+}
+
+
+
+/* Menu: Children > Middle Door ================================================ */
+
+.menu-door {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+
+/* Menu: Children > Current Time ================================================ */
+
+.menu-time {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+
+
+/* iFrame ================================================ */
+
+iframe{
+  display: block;
+  margin: auto;
+  border:none;
+}
+
+/* .toolsWorld{
+  position: fixed;
+  top: 0;
+  left: 0;
+  border: none;
+  width: 100vw;
+  height: 100vh;
+} */
+
+.toolsWorld{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  /* top: -4200px; */
+  /* left: -200px; */
+  border: none;
+  /* width: calc(100% + 350px);
+  height: calc(100% + 300px); */
+  /* height: calc(100% + 300px + 4200px); */
+
+  /* -ms-zoom: 0.973;
+  -moz-transform: scale(0.973);
+  -moz-transform-origin: 0 0;
+  -o-transform: scale(0.973);
+  -o-transform-origin: 0 0;
+  -webkit-transform: scale(0.973);
+  -webkit-transform-origin: 0 0; */
+}
+
+.toolsWorld2{
+  position: fixed;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  padding-left: 20px;
+  /* top: -4200px; */
+  /* left: -200px; */
+  border: none;
+  background: #00c55d;
+  /* background: #00cc00; */
+  /* width: calc(100% + 350px);
+  height: calc(100% + 300px); */
+  /* height: calc(100% + 300px + 4200px); */
+
+  /* -ms-zoom: 0.973;
+  -moz-transform: scale(0.973);
+  -moz-transform-origin: 0 0;
+  -o-transform: scale(0.973);
+  -o-transform-origin: 0 0;
+  -webkit-transform: scale(0.973);
+  -webkit-transform-origin: 0 0; */
+}
+
+.row1 {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  min-width: 500px;
+  min-height: 500px;
+  /* transform: translate(-50%, 0); */
+  z-index: 7;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.row2 {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  padding-left: 20px;
+  min-width: 500px;
+  min-height: 500px;
+  /* transform: translate(-50%, 0); */
+  z-index: 7;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.row3 {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  min-width: 500px;
+  min-height: 500px;
+  /* transform: translate(-50%, 0); */
+  z-index: 7;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  overflow: hidden;
+}
+
+/* .row3 {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 58px 0 0 0;
+  z-index: 7;
+  overflow-y: scroll;
+} */
+
+.scrollContents {
+  position: fixed;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.row4 {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  min-width: 500px;
+  min-height: 500px;
+  /* transform: translate(-50%, 0); */
+  z-index: 7;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  overflow: hidden;
+}
+
+/* .row4 {
+  display: none;
+  position: fixed;
+  top: 15%;
+  left: 50%;
+  width: 50%;
+  height: 70%;
+  min-width: 500px;
+  min-height: 300px;
+  max-width: 830px;
+  margin: auto;
+  transform: translate(-50%, 0);
+  border: 3px solid #000000;
+  z-index: 7;
+} */
+
+.arena-project {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0px solid;
+  overflow: hidden;
+}
+
+#middle {
+  float: left;
+  position: fixed;
+  top: 0;
+  left: calc(50% - 10px);
+  /* left: calc(var(--col3-width)); */
+  width: 20px;
+  height: 100%;
+  margin: 0;
+  padding: 10px 10px 0 20px;
+  z-index: 3;
+  mix-blend-mode: difference;
+  backdrop-filter: blur(10px);
+}
+
+/* Layout ================================================ */
+
+.col2 {
+	display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 20px;
+  padding-left: 20px;
+}
+
+
+/* Schedule ================================================ */
+
+.tb4 {
+	display: grid;
+  grid-template-columns: 70px 80px 1fr 1fr;
+  column-gap: 10px;
+  row-gap: 10px;
+  border-bottom: 1px solid #000000;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.tb4Mo {
+  /* display: none; */
+  text-transform: uppercase;
+}
+
