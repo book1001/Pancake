@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Communal Radio Club</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+  <!-- css -->
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="font.css">
+  <link rel="stylesheet" href="index_media.css">
+
+  <!-- jquery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+  <!-- p5 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.min.js"></script>
+</head>
+
+
+<body>
+  <!-- Menu: Random ================================================================== -->
+  <div class="cavas-area">
+    <button id="radioRandomBtn" class="font-menu" style="font-size: 0;" onclick="radioRandomPlay()">
+      <img id="radioRandomBtnImg" src="icon/btn.png">
+    </button>
+  </div>
+
+
+  <!-- Menu: Chat ================================================================== -->
+
+  <iframe class="menu-chat" src="https://r-club3.glitch.me"></iframe>
+  
+
+
+  <!-- Menu: Stations ================================================================== -->
+  <div class="menu-right">
+    <button id="row0" class="menu-btn font-category" onclick="radioPlay(0, 'https://ice7.securenetsystems.net/KCSM2')">
+      Jazz
+    </button>
+    <button id="row1" class="menu-btn font-category" onclick="radioPlay(1, 'https://live.radioart.com/fIndie.mp3')">
+      Indie
+      <!-- https://www.radioart.com -->
+    </button>
+    <button id="row2" class="menu-btn font-category" onclick="radioPlay(2, 'https://myhouseradiofm.out.airtime.pro:8000/myhouseradiofm_a')">
+      Dance
+      <!-- My House Radio: Commercial-Free Dance Music -->
+      <!-- https://www.myhouseradio.fm -->
+    </button>
+    <button id="row3" class="menu-btn font-category" onclick="radioPlay(3, 'https://das-edge09-live365-dal03.cdnstream.com/a99840?listenerId=esTrackblock0368254&aw_0_1st.playerid=esPlayer&aw_0_1st.skey=1710206896')">
+      Musical
+      <!-- Musical Theatre Radio -->
+      <!-- https://player.live365.com -->
+    </button>
+    <button id="row4" class="menu-btn font-category" onclick="radioPlay(4, 'https://eagle.streemlion.com/proxy/psychedelicj?mp=/stream')">
+      Jukebox
+    </button>
+    <button id="row5" class="menu-btn font-category" onclick="radioPlay(5, 'http://gr02.cdnstream.com:8290')">
+      pop
+    </button>
+    <button id="row6" class="menu-btn font-category" onclick="radioPlay(6,'https://worldwidefm.out.airtime.pro/worldwidefm_a?src=muso.fm')">
+      WorldWide FM
+    </button>
+    <!-- <button class="font-category">
+      Rock
+    </button>
+    <button class="font-category">
+      Ambient
+    </button>
+    <button class="font-category">
+      Paradise
+    </button>
+    <button class="font-category">
+      Classical
+    </button> -->
+  </div>
+
+
+  <!-- Menu: Info ================================================================== -->
+  <div class="menu-bottom">
+    <button class="font-menu">
+      Communal Radio Club
+    </button>
+  </div>
+
+
+
+  <!-- Players ================================================================== -->
+
+  <audio id="radioPlayer0"></audio>
+  <audio id="radioPlayer1"></audio>
+  <audio id="radioPlayer2"></audio>
+  <audio id="radioPlayer3"></audio>
+  <audio id="radioPlayer4"></audio>
+  <audio id="radioPlayer5"></audio>
+  <audio id="radioPlayer6"></audio>
+
+  <audio id="radioPlayerR"></audio>
+  <!-- <audio id="radioPlayer" controls></audio> -->
+
+
+
+
+
+  <!-- <button id="radioPlay">Play Random Video</button>
+  <source id="videoContainer" type="video/mp4"> -->
+
+
+
+  <!-- Videos ================================================================== -->
+
+  <!-- <div class="videoContainer">
+    <video id="videoPlayer" width="80%" height="auto" autoplay loop muted></video>
+  </div> -->
+  
+
+  <!-- JS ================================================================== -->
+
+  <script type="text/javascript" src="canvas.js"></script>
+  <script type="text/javascript" src="radio5.js"></script>
+  <!-- <script type="text/javascript" src="radio3.js"></script> -->
+  <!-- <script type="text/javascript" src="radio2.js"></script> -->
+ 
+</body>
+</html>
