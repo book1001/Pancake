@@ -1,0 +1,158 @@
+/* font: import ================================================ */
+
+@font-face {
+  font-family: 'MetamorBit';
+  src: url('./font/Trial_MetamorBit-Regular.woff') format('woff');
+  src: url('./font/Trial_MetamorBit-Regular.woff2') format('woff2');
+  /* src: url('./font/MetamorBit_TrialVF.woff') format('woff'); */
+}
+
+@font-face {
+  font-family: 'FKGroteskMonoTrial-Regular';
+  src: url('./font/FKGroteskMonoTrial-Regular.woff') format('woff');
+  src: url('./font/FKGroteskMonoTrial-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'FKGroteskSemiMonoTrial-Regular';
+  src: url('./font/FKGroteskSemiMonoTrial-Regular.woff') format('woff');
+  src: url('./font/FKGroteskSemiMonoTrial-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'ABCArizona';
+  src: url('./font/ABCArizonaFlare-Regular.woff') format('woff');
+  src: url('./font/ABCArizonaFlare-Regular.woff2') format('woff2');
+  /* src: url('./font/ABCArizonaPlusVariable.ttf') format('ttf'); */
+  /* src: url('./font/ABCArizonaFlare-Regular.otf') format('opentype'); */
+}
+
+
+/* text: drag color ================================================ */
+
+::selection {
+  color: #000000;
+  text-shadow: 0 0px 6px yellow;
+  background: #2d2d2d;
+  /* color: #ffffff;
+  text-shadow: 0 0px 6px blue;
+  background: gainsboro; */
+
+  /* text-shadow: 0 0px 6px lightgreen;
+  background: white; */
+
+  /* color: #ffffff !important;
+  background: #000000 !important; */
+  /* color: #000000 !important;
+  background: #ffffff !important; */
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: #000000;
+  text-shadow: 0 0px 6px yellow;
+  background: #2d2d2d;
+
+  /* color: #ffffff;
+  text-shadow: 0 0px 6px blue;
+  background: gainsboro; */
+
+  /* color: #ffffff !important;
+  background: #000000 !important; */
+  /* color: #000000 !important;
+  background: #ffffff !important; */
+}
+
+
+/* default ================================================ */
+a {
+  color: #ffffff;
+}
+
+a:hover {
+  color: #000000;
+  text-shadow: 0 0px 6px yellow;
+}
+
+b {
+  font-weight: normal;
+  background: #000000;
+  color: #ffffff;
+}
+
+
+/* font: menu ================================================ */
+
+.font-menu{
+  font-family: monospace;
+  /* font-family: MetamorBit,sans-serif; */
+  font-size: 12px;
+  text-align: left;
+  letter-spacing: 0.027em;
+  text-transform: uppercase;
+  color: yellow;
+  background: transparent;
+  border: none;
+}
+
+.font-category{
+  display:block;
+  font-family: monospace;
+  /* font-family: MetamorBit,sans-serif; */
+  /* font-family: FKGroteskSemiMonoTrial-Regular,sans-serif; */
+  font-size: 12px;
+  letter-spacing: 0.027em;
+  text-transform: uppercase;
+  color: white;
+  background: transparent;
+  border: none;
+}
+
+.font-category:hover {
+  color: yellow;
+  cursor: pointer;
+}
+
+
+/* font: description ================================================ */
+
+h1 {
+  font-family: MetamorBit;
+  /* font-family: ABCArizona, serif; */
+  font-size: 48px;
+  text-transform: uppercase;
+  margin-block-start: 0;
+  margin-block-end: 50px;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  font-weight: normal;
+  /* text-align: center; */
+  color: white;
+  z-index:3;
+  line-height: 56px;
+}
+
+h3 {
+    font-family: ABCArizona, serif;
+    font-size: 24px;
+    /* letter-spacing: 0.027em; */
+    text-transform: uppercase;
+    margin-block-start: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: normal;
+    /* text-indent: 50px; */
+}
+
+h4 {
+    font-family: ABCArizona, serif;
+    font-size: 24px;
+    margin-block-start: 0.3em;
+    margin-block-end: 0.3em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: normal;
+    color: white;
+    mix-blend-mode: difference;
+    z-index:3;
+}
+
