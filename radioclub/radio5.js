@@ -1,56 +1,6 @@
 
 
 
-// let radioLast = -1;
-
-// function radioRandomPlay() {
-//   var radioPlayer = document.getElementById('radioPlayer');
-//   const radioRandom = getRandomItem(radioLast, radioList.length);
-//   radioLast = radioRandom;
-//   const radioSelected = radioList[radioRandom];
-
-//   function onAudioLoading() {
-//     // playButton.style.color = 'gray';
-//     // playButton.classList.add('blinking');
-//     radioSelected.url;
-//     radioRandomBtnImg.classList.add('radioRandomBtnLoading');
-//   }
-
-//   function onAudioPlaying() {
-//     // playButton.style.color = 'yellow';
-//     // playButton.classList.remove('blinking');
-//     radioRandomBtnImg.classList.remove('radioRandomBtnLoading');
-//   }
-
-//   radioPlayer.addEventListener('loadstart', onAudioLoading);
-//   radioPlayer.addEventListener('playing', onAudioPlaying);
-
-//   // 현재 오디오가 재생 중인지 확인
-//   if (radioPlayer.paused) {
-//     // 일시 중지된 상태일 경우, 새로운 URL을 설정하고 재생
-//     radioPlayer.src = radioSelected.url;
-//     radioPlayer.load();
-//     radioPlayer.play();
-//   } else {
-//     // 재생 중인 상태일 경우, 일시 중지
-//     radioPlayer.pause();
-//   }
-
-
-// }
-
-// // 중복 선택을 방지하기 위한 함수
-// function getRandomItem(itemLast, listLength) {
-//   let itemRandom;
-//   do {
-//     itemRandom = Math.floor(Math.random() * listLength);
-//   } while (itemRandom === itemLast);
-
-//   return itemRandom;
-// }
-
-
-
 
 let previousRow = null;
 let currentPlayer = null;
@@ -63,6 +13,13 @@ const radioPlayers = Array.from(radioPlayerElements);
 const buttonElements = document.querySelectorAll('[id^="row"]');
 const buttons = Array.from(buttonElements);
 
+
+const videoList = [
+  "resource_gif/1.gif",
+  "resource_gif/2.gif",
+];
+
+let videoLast = -1;
 
 function onAudioLoading(currentRow) {
   buttons.forEach(row => {
@@ -114,6 +71,13 @@ function radioPlay(index, url) {
       }
     }
   }
+
+  var videoPlayer = document.getElementById('videoPlayer');
+  var videoRandom = getRandomItem(videoLast, videoList.length);
+  videoLast = videoRandom;
+  var videoSelected = videoList[videoRandom];
+  videoPlayer.src = videoSelected;
+
 
   randomVideo = random(videos);
   randomVideo.size(gridSize, gridSize/2);
