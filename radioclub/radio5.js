@@ -15,11 +15,25 @@ const buttons = Array.from(buttonElements);
 
 
 const videoList = [
-  "resource_gif/1.gif",
-  "resource_gif/2.gif",
+  "resource_gif/bird2_1.gif",
+  "resource_gif/bird2_2.gif",
+  "resource_gif/dance1_1.gif",
+  "resource_gif/dance2_1.gif",
+  "resource_gif/dance2_2.gif",
+  "resource_gif/dance2_3.gif",
+  "resource_gif/dance5_1.gif",
+  "resource_gif/walk1_1.gif",
+  "resource_gif/walk2_1.gif",
+  "resource_gif/walk2_2.gif",
 ];
 
 let videoLast = -1;
+
+var videoPlayer = document.getElementById('videoPlayer');
+var videoRandom = getRandomItem(videoLast, videoList.length);
+videoLast = videoRandom;
+var videoSelected = videoList[videoRandom];
+videoPlayer.src = videoSelected;
 
 function onAudioLoading(currentRow) {
   buttons.forEach(row => {
