@@ -196,6 +196,12 @@ function radioRandomPlay() {
   //   radioRandomBtnImg.classList.remove('radioRandomBtnLoading');
   // }
 
+  var videoPlayer = document.getElementById('videoPlayer');
+  var videoRandom = getRandomItem(videoLast, videoList.length);
+  videoLast = videoRandom;
+  var videoSelected = videoList[videoRandom];
+  videoPlayer.src = videoSelected;
+
 
   randomVideo = random(videos);
   randomVideo.size(gridSize, gridSize/2);
