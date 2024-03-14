@@ -184,6 +184,14 @@ canvas {
   mix-blend-mode: difference;
 }
 
+#playStop {
+  display: none;
+}
+
+#radioStationText {
+  display: none;
+}
+
 
 /* Menu: chat ================================================ */
 

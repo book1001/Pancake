@@ -61,7 +61,20 @@
     <button id="row6" class="menu-btn font-category" onclick="radioPlay(6, 'WorldWide FM', 'https://worldwidefm.out.airtime.pro/worldwidefm_a?src=muso.fm')">
       WorldWide FM
     </button>
+    <!-- <button class="font-category">
+      Rock
+    </button>
+    <button class="font-category">
+      Ambient
+    </button>
+    <button class="font-category">
+      Paradise
+    </button>
+    <button class="font-category">
+      Classical
+    </button> -->
   </div>
+
 
 
   <!-- Menu: Info ================================================================== -->
@@ -69,11 +82,12 @@
     <button class="font-menu">
       Communal Radio Club
     </button>
-    <button id="playStop" class="font-menu" onclick="playStop()">
+    <button id="playStop" class="font-menu" style="padding-left: 35px;" onclick="playStop()">
       ▶︎
     </button>
-    <button id="radioStationText" class="font-menu" onclick="openDropdown()">Jazz</button>
+    <button id="radioStationText" style="position: fixed; right: 10px;" class="font-menu" onclick="openDropdown()">Jazz</button>
   </div>
+
 
 
   <!-- Players ================================================================== -->
@@ -85,14 +99,21 @@
   <audio id="radioPlayer5"></audio>
   <audio id="radioPlayer6"></audio>
 
+  <audio id="radioPlayerR"></audio>
+  <!-- <audio id="radioPlayer" controls></audio> -->
+
+
 
   <!-- Videos ================================================================== -->
   <div class="videoContainer">
     <img id="videoPlayer">
+    <!-- <video id="videoPlayer" width="80%" height="auto" autoplay loop muted></video> -->
   </div>
   
 
   <!-- JS ================================================================== -->
+
+  <!-- <script type="text/javascript" src="canvas.js"></script> -->
   <script type="text/javascript" src="radio7.js"></script>
  
 </body>
