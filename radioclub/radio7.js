@@ -104,7 +104,7 @@ function onAudioLoading(currentRow) {
   currentRow.classList.add('blinking');
   document.getElementById("radioStationText").style.color = 'gray';
   // document.getElementById("radioStationText").classList.add('blinking');
-  button.innerText = "⎯";
+  button.innerText = "–";
   radioRandomBtnImg.classList.add('radioRandomBtnLoading');
 }
 

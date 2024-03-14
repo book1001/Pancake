@@ -181,7 +181,7 @@ canvas {
   margin: 0;
   padding: 0;
   z-index: 5;
-  mix-blend-mode: difference;
+  /* mix-blend-mode: difference; */
 }
 
 #playStop {
