@@ -147,7 +147,7 @@
   .menu-bottom {
     display: grid; 
     grid-auto-columns: 1fr; 
-    grid-template-columns: 188px auto 90px;
+    grid-template-columns: 188px auto 100px;
     grid-template-rows: 1fr; 
     gap: 0px 0px; 
     grid-template-areas: 
@@ -157,7 +157,7 @@
     bottom: 5px;
     left: 10px;
     right: auto;
-    width: calc(100svw - 20px);
+    width: calc(100svw - 10px);
     transform: none;
   }
   

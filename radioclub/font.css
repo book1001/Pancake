@@ -1,6 +1,12 @@
 /* font: import ================================================ */
 
 @font-face {
+  font-family: 'Menlo';
+  src: url('./font/Menlo-Regular.woff') format('woff');
+  src: url('./font/Menlo-Regular.woff2') format('woff2');
+}
+
+@font-face {
   font-family: 'MetamorBit';
   src: url('./font/Trial_MetamorBit-Regular.woff') format('woff');
   src: url('./font/Trial_MetamorBit-Regular.woff2') format('woff2');
@@ -83,7 +89,8 @@ b {
 /* font: menu ================================================ */
 
 .font-menu{
-  font-family: monospace;
+  font-family: Menlo;
+  /* font-family: monospace; */
   /* font-family: MetamorBit,sans-serif; */
   font-size: 12px;
   text-align: left;
@@ -96,7 +103,8 @@ b {
 
 .font-category{
   display:block;
-  font-family: monospace;
+  font-family: Menlo;
+  /* font-family: monospace; */
   /* font-family: MetamorBit,sans-serif; */
   /* font-family: FKGroteskSemiMonoTrial-Regular,sans-serif; */
   font-size: 12px;

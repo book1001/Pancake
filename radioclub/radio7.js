@@ -127,12 +127,6 @@ function radioRandomPlay() {
   var randomIndex = Math.floor(Math.random() * buttons.length);
   // Get the button corresponding to the random index and trigger its click event
   buttons[randomIndex].click();
-
-  var videoPlayer = document.getElementById('videoPlayer');
-  var videoRandom = getRandomItem(videoLast, videoList.length);
-  videoLast = videoRandom;
-  var videoSelected = videoList[videoRandom];
-  videoPlayer.src = videoSelected;
 }
 
 
