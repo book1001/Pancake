@@ -154,11 +154,13 @@
     ". . ."; 
     /* top: calc(33svh + 10px); */
     top: auto;
-    bottom: 5px;
+    bottom: 0;
+    padding-bottom: 5px;
     left: 10px;
     right: auto;
     width: calc(100svw - 10px);
     transform: none;
+    background: #000000;
   }
   
   #playStop {

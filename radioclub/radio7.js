@@ -9,7 +9,7 @@ const radioPlayers = Array.from(radioPlayerElements);
 const buttonElements = document.querySelectorAll('[id^="row"]');
 const buttons = Array.from(buttonElements);
 
-
+var dropdown = document.getElementById("dropdownStation");
 var button = document.getElementById("playStop");
 
 const videoList = [
@@ -43,7 +43,7 @@ function onAudioLoading(currentRow) {
   currentRow.style.color = 'gray';
   currentRow.classList.add('blinking');
   document.getElementById("radioStationText").style.color = 'gray';
-  document.getElementById("radioStationText").classList.add('blinking');
+  // document.getElementById("radioStationText").classList.add('blinking');
   button.innerText = "⎯";
   radioRandomBtnImg.classList.add('radioRandomBtnLoading');
 }
@@ -53,12 +53,25 @@ function onAudioPlaying(currentRow) {
     row.style.color = 'white';
     row.classList.remove('blinking');
   });
+  // setTimeout(function() {
+  //   dropdown.style.display = "none";
+  // }, 300);
+  if (window.innerWidth <= 600) {
+    dropdown.style.display = "none";
+  }
   currentRow.style.color = 'yellow';
   currentRow.classList.remove('blinking');
   document.getElementById("radioStationText").style.color = 'yellow';
   document.getElementById("radioStationText").classList.remove('blinking');
   button.innerText = "◼︎";
   radioRandomBtnImg.classList.remove('radioRandomBtnLoading');
+  
+  var videoPlayer = document.getElementById('videoPlayer');
+  var videoRandom = getRandomItem(videoLast, videoList.length);
+  videoLast = videoRandom;
+  var videoSelected = videoList[videoRandom];
+  videoPlayer.src = videoSelected;
+
 }
 
 function radioPlay(index, text, url) {
@@ -93,11 +106,6 @@ function radioPlay(index, text, url) {
     }
   }
 
-  var videoPlayer = document.getElementById('videoPlayer');
-  var videoRandom = getRandomItem(videoLast, videoList.length);
-  videoLast = videoRandom;
-  var videoSelected = videoList[videoRandom];
-  videoPlayer.src = videoSelected;
 
 
   
@@ -143,7 +151,7 @@ function getRandomItem(itemLast, listLength) {
 
 
 function openDropdown(){
-  var dropdown = document.getElementById("dropdownStation");
+  
   if (dropdown.style.display === "block") {
     dropdown.style.display = "none";
   } else {
@@ -193,6 +201,7 @@ function responsive() {
 function responsive_Tablet() {
   document.getElementById("playStop").style.display = "inline-block";
   document.getElementById("radioStationText").style.display = "inline-block";
+  document.getElementById("dropdownStation").style.display = "none";
 }
 
 function responsive_PC() {
