@@ -63,7 +63,7 @@ function onAudioPlaying(currentRow) {
   currentRow.classList.remove('blinking');
   document.getElementById("radioStationText").style.color = 'yellow';
   document.getElementById("radioStationText").classList.remove('blinking');
-  button.innerText = "◼︎";
+  button.innerText = "■";
   radioRandomBtnImg.classList.remove('radioRandomBtnLoading');
   
   var videoPlayer = document.getElementById('videoPlayer');
@@ -169,17 +169,17 @@ function playStop() {
     currentPlayer.src = 'https://ice7.securenetsystems.net/KCSM2';
     currentPlayer.load();
     currentPlayer.play();
-    button.innerText = "◼︎";
+    button.innerText = "■";
   } else {
     // If currentPlayer is playing (not paused), pause it
     if (!currentPlayer.paused && !currentPlayer.ended) {
       currentPlayer.pause();
-      button.innerText = "▶︎";
+      button.innerText = "▶";
     } else {
       // If currentPlayer is paused or ended, resume playback
       currentPlayer.load();
       currentPlayer.play();
-      button.innerText = "◼︎";
+      button.innerText = "■";
     }
   }
 }
