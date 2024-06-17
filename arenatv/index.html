@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+  <title>are.na TV</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  
+  <base target="_blank">
+  
+  <!--  This is for routing  -->
+  <script src="//unpkg.com/navigo"></script>
+  
+  <!-- css -->
+  <link rel="stylesheet" href="font.css">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="font.css">
+  <link rel="stylesheet" href="index_media.css">
+
+</head>
+
+<body>
+  <style>
+    html,
+    body {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* background: black; */
+    }
+  </style>
+
+  <a href="https://leehalim.com" style="position: fixed; top: 10px; left: 10px; font-family: Arial, Helvetica, sans-serif; font-size: 13px;">
+    leehalim.com
+  </a>
+  
+  <button style="display: block; text-align: center;" onclick="openWin()">are.na TV</button>
+
+  <a style="display: block; padding-top: 20px; font-size: 13px; text-align: center;" href="https://www.are.na/halim-lee/are-natv" target="_blank">broadcast your videos</a>
+
+  <!-- <iframe class="arena" src="https://www.are.na/halim-lee/test_music"></iframe> -->
+
+  <script>
+    let myWindow;
+    
+    function openWin() {
+      myWindow = window.open("tv.html", "", "width=300, height=344");
+    }
+  </script>
+
+</body>
+  
+</html>
