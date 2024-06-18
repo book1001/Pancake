@@ -175,14 +175,14 @@ function renderChannel(slug, page) {
                       
                     case "Text":
                       return `
-                      <audio loop autoplay src="./sound/tvnoise.mp3"></audio>
+                      <audio autoplay loop src="./sound/tvnoise.mp3"></audio>
                       <img class="BlockInner__Image" style="z-index:-1;" src="img/noise.gif">
                       <p class="BlockInner__Text">${block.content}</p>
                       `;
 
                     case "Attachment":
                       return `
-                      <video class="BlockInner__Video" autoplay src="${block.attachment.url}"></video>
+                      <video class="BlockInner__Video" autoplay loop src="${block.attachment.url}"></video>
                       <img class="BlockInner__Image" style="z-index:-1;" src="img/noise2.gif">
                       `;
                 
