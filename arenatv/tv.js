@@ -158,6 +158,7 @@ function renderChannel(slug, page) {
                         <img class="Block_loop_img" style="transform: translate(0, -100%);" src="${block.image.large.url}">
                         <img class="Block_loop_img" src="${block.image.large.url}">
                         <img class="Block_loop_img" style="transform: translate(0, 100%);" src="${block.image.large.url}">
+                        <audio autoplay loop src="sound/noise.mp3"></audio>
                       </div>
                       `;
 
@@ -169,6 +170,7 @@ function renderChannel(slug, page) {
                         <img class="Block_loop_img" style="transform: translate(0, -100%);" src="${block.image.large.url}">
                         <img class="Block_loop_img" src="${block.image.large.url}">
                         <img class="Block_loop_img" style="transform: translate(0, 100%);" src="${block.image.large.url}">
+                        <audio autoplay loop src="sound/noise.mp3"></audio>
                       </div>
                       `;
                       
