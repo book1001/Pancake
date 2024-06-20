@@ -1,52 +1,8 @@
 @media only screen and (max-width:600px) {
-  /* .ChannelContents {
-    grid-template-columns: 1fr; 
-    font-size: 0;
-  }
-
-  .ChannelContents-3 {
-    grid-template-columns: 1fr 1fr 1fr; 
-    font-size: 0;
-  } */
-  
-  /* .BlockInner__Text {
-    left: 0;
-    transform: translate(0, -50%);
-    -ms-transform: translate(0, -50%);
-    -webkit-transform: translate(0, -50%);
-  }
-
-  p, h3 { 
-    font-size: 15px;
-  } */
   
 }
 
 @media only screen and (max-width:400px) {   /* For tablets: */
-
-  /* .ChannelContents {
-    grid-template-columns: 1fr 1fr; 
-    font-size: 0;
-  }
-
-  .ChannelContents-3 {
-    grid-template-columns: 1fr 1fr 1fr; 
-    font-size: 0;
-  } */
-  
-  /* .p1_magic-spells_1 {
-    grid-template-columns: 1fr; 
-    font-size: 0;
-  }
-
-  .p1_magic-spells_2 {
-    grid-template-columns: 1fr; 
-    font-size: 0;
-  } */
-  
-  /* .Text {
-    grid-column: 1 / span 3; 
-  } */
   
 }
 

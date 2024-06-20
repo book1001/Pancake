@@ -5,7 +5,6 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  
   <base target="_blank">
   
   <!--  This is for routing  -->
@@ -14,43 +13,58 @@
   <!-- css -->
   <link rel="stylesheet" href="font.css">
   <link rel="stylesheet" href="index.css">
-  <link rel="stylesheet" href="font.css">
   <link rel="stylesheet" href="index_media.css">
-
 </head>
 
 <body>
-  <style>
-    html,
-    body {
-        height: 100%;
-        margin: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        /* background: black; */
-    }
-  </style>
-
-  <a href="https://leehalim.com" style="position: fixed; top: 10px; left: 10px; font-family: Arial, Helvetica, sans-serif; font-size: 13px;">
-    leehalim.com
+  <!-- ======================================================= -->
+  <!-- Info -->
+  <!-- ======================================================= -->
+  <a class="info" href="https://leehalim.com">
+    Created by Halim Lee | leehalim.com
   </a>
   
-  <button style="display: block; text-align: center;" onclick="openWin()">are.na TV</button>
 
-  <a style="display: block; padding-top: 20px; font-size: 13px; text-align: center;" href="https://www.are.na/halim-lee/are-natv" target="_blank">broadcast your videos</a>
+  <!-- ======================================================= -->
+  <!-- About -->
+  <!-- ======================================================= -->
+  <div class="about">
+    Welcome to are.na TV<br> 
+    This website builds community TV channels based on Are.na<br><br>
+    <!-- <button class="about-btn-tv" onclick="openWin('https://pancake-garden-arenatv-remotecontroler.glitch.me', '✴︎✴︎', 300, 344)">are.na TV</button> -->
+    <button class="about-btn-tv" onclick="openWin('tv.html', '✴︎✴︎', 300, 344)">are.na TV</button>
+    <br><br><br>
 
-  <!-- <iframe class="arena" src="https://www.are.na/halim-lee/test_music"></iframe> -->
-
-  <script>
-    let myWindow;
+    Feel free to upload your favorite videos, audio, images, or text <a href="https://www.are.na/halim-lee/are-natv" target="_blank">here</a><br>
+    Your content will be broadcast on are.na TV<br><br><br>
+    <a href="https://www.are.na/halim-lee/are-natv" target="_blank">
+      <img class="about-img-arena" src="img/about_arena.png">
+    </a>
+    <br><br>
     
-    function openWin() {
-      myWindow = window.open("tv.html", "", "width=300, height=344");
-    }
-  </script>
+    YouTube and Vimeo are currently experiencing bad reception.<br>
+    I would recommend uploading MP4 or MP3 files instead.<br>
+    <br><br><br>
+
+    ✴︎✴︎
+    <br><br>
+    In progress — mobile device remote control changing are.na TV channels
+    <!-- In progress — scanning the QR code with a mobile device will open a remote control that allows you to change the channels on arena TV. -->
+  </div>
+
+
+
+  <!-- ======================================================= -->
+  <!-- API: logs -->
+  <!-- ======================================================= -->
+  <!-- <div class="ARENA-container"></div> -->
+
+
+
+  <!-- ======================================================= -->
+  <!-- JS -->
+  <!-- ======================================================= -->
+  <script type="text/javascript" src="index.js"></script>
 
 </body>
-  
 </html>

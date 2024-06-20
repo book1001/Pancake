@@ -1,25 +1,27 @@
+/* ============================================================= */
+/* Basic */
+/* ============================================================= */
 
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: auto;
 
-/* Variable ================================================ */
-
-:root {
-  --scrollbar-width: 20px;
-  --scrollbar-right: 0px;
-  --scrollbar-left: 17px;
-
-  --col1-width: 140px;
-  --col2-1-width: 310px;
-  --col2-extra: 3px;
-  --col3-width: 15%;
-  --col4-width: 120px; /* = --col1-width - --scrollbar-widt */
+  font-family: Arial, Helvetica, sans-serif; 
+  font-size: 13px;
+  text-align: center;
+  color: #333;
 }
-
-
-/* Scrollbar ================================================ */
 
 ::-webkit-scrollbar { /* width */
   width: 0;
-  /* width: var(--scrollbar-width); */
 }
 ::-webkit-scrollbar-track { /* Track */
   background: transparent;
@@ -33,121 +35,48 @@
   border-left: var(--scrollbar-left) solid transparent;
 }
 
-/* Body ================================================ */
 
-body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  overflow-y: auto;
+
+/* ============================================================= */
+/* Info */
+/* ============================================================= */
+.info {
+  position: fixed; 
+  top: 10px; 
+  left: 10px; 
+  font-weight: normal;
+  color: black;
 }
 
 
-/* Divider =============================================== */
+/* ============================================================= */
+/* About */
+/* ============================================================= */
 
-hr {
-    background: #000000;
-    border: 0;
-    height: 1px;
-    display: block;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    margin-left: 0;
-    margin-right: 0;
-}
-
-
-/* iframe =============================================== */
-
-.arena {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  border: none;
-}
-
-/* TV =============================================== */
-
-.frameframe {
-  display: grid; 
-  grid-auto-columns: 1fr; 
-  grid-template-columns: 5% 70% 25%; 
-  grid-template-rows: 10% 40% auto; 
-  /* grid-template-rows: 10% 80% 10%;  */
-  gap: 0px 0px; 
-
-  place-items: center;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 300px;
-  margin: 0;
-  padding: 0;
-  aspect-ratio: 300 / 344;
-  /* aspect-ratio: 300 / 319; */
-  /* aspect-ratio: 322 / 300; */
-  /* aspect-ratio: 328 / 274; */
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%); /* Safari */
-  -moz-transform: translate(-50%, -50%); /* Firefox */
-  -ms-transform: translate(-50%, -50%); /* IE 9 */
-  -o-transform: translate(-50%, -50%); /* Opera */
-  border: none;
-  z-index: 2;
-
-  text-align: center;
-}
-
-
-.btn { 
-  grid-area: 3 / 1 / 3 / 4;
-  z-index: 3;
-}
-
-.frame {
+.about { 
   display: block;
-  grid-area: 1 / 1 / 4 / 4;
-  position: absolute;
-  width:100%;
-  height:100%;
-  margin: 0;
-  padding: 0;
-  pointer-events: none;
-  object-fit: cover;
-  &::-webkit-media-controls {
-    display:none !important;
- }
+  padding-top: 20px; 
 }
 
-#prevPageButton {
-  /* position: absolute;
-  top: 10px;
-  left: 280px; */
-  z-index: 3;
+.about-btn-tv {
+  display: block; 
+  margin: auto; 
 }
 
-#nextPageButton {
-
-  z-index: 3;
+.about-img-arena {
+  display:block; 
+  margin: auto; 
+  width: 250px; 
+  height: auto; 
+  border: 1px solid gray;
 }
 
-.pagination-buttons {
 
-  z-index: 3;
-}
+/* ============================================================= */
+/* API: container */
+/* ============================================================= */
 
-/* Channel ================================================ */
-
-.ChannelInfo {
-  display: inline-block;
-  margin: 20px 0 0 0;
-  padding: 0;
-}
-
-.ChannelContents {
+.ARENA-container {
   /* display: grid; 
   grid-auto-columns: 1fr; 
   grid-template-columns: 5% 70% 25%; 
@@ -162,210 +91,35 @@ hr {
   height: 155px;
   margin: 0;
   padding: 0;
-  aspect-ratio: 300 / 200;
-  /* aspect-ratio: 300 / 319; */
-  /* aspect-ratio: 322 / 300; */
-  /* aspect-ratio: 328 / 274; */
   -webkit-transform: translate(-50%, -80%); /* Safari */
   -moz-transform: translate(-50%, -80%); /* Firefox */
   -ms-transform: translate(-50%, -80%); /* IE 9 */
   -o-transform: translate(-50%, -80%); /* Opera */
   transform: translate(-50%, -80%);
-  /* pointer-events: none; */
   border: none;
-  pointer-events: none;
-  /* perspective: 1000px; */
-
-  /* position: fixed;
-  top: 10px;
-  left: 10px;
-  width: 270px;
-  font-size: 0; */
 }
 
-.ChannelContents-3 {
-  display: grid;
-  margin: 0;
-  padding-bottom: 20px;
-  grid-template-columns: 1fr 1fr 1fr; 
-  font-size: 0;
-  gap: 20px;
-}
 
-/* Blocks ================================================ */
+/* ============================================================= */
+/* API: Block */
+/* ============================================================= */
 
 .Block {
   padding: 0;
   color: #000000;
   overflow: hidden;
   word-wrap: break-word;
-  /* max-height: 300px; */
 }
 
-.Block__title {
-  display: block;
-  position: absolute;
-  font-family: Menlo;
-  /* mix-blend-mode: difference; */
-  color: blue;
-  font-size: 12px;
-  padding: 4px 0 0 9px;
-  width: 92%;
-  word-wrap: break-word;
-  height: 155px;
-  overflow: scroll;
-}
 
-.BlockInner__Video {
-  display: block;
-  /* grid-area: 2 / 2 / 3 / 3; */
-  position: absolute;
-  /* top: 50%;
-  left: 50%; */
-  width:100%;
-  height:100%;
-  margin: 0;
-  padding: 0;
-  /* pointer-events: none; */
-  object-fit: cover;
-  
-  &::-webkit-media-controls {
-    display:none !important;
- }
-
-  /* filter: saturate(2); */
-  /* filter: sepia(100%); */
-  filter: grayscale(100%);
-}
-
-.BlockInner__Link {
-  display: block;
-  font-size: 0;
-  margin-block-start: 0;
-  margin-block-end: 0;
-  margin-inline-start: 0;
-  margin-inline-end: 0;
-  font-weight: normal;
-  border: 10px solid #000;
-  background: #000000;
-  /* filter:invert(1); */
-  overflow-y: auto;
-}
-
-.BlockInner__Text {
+.Block_log {
   display: block;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  word-wrap: break-word;
+
   font-family: Menlo;
-  /* mix-blend-mode: difference; */
+  font-size: 12px;
   color: white;
-  font-size: 12px;
-  padding: 4px 0 0 9px;
-  width: 92%;
-  word-wrap: break-word;
-  height: 155px;
-  overflow: scroll;
-  text-shadow: 0 0px 6px black;
-  z-index:10;
-  /* position: relative;
-  top: 40%;
-  transform: translate(0, -50%);
-  display: block;
-  font-size: 0;
-  margin-block-start: 0;
-  margin-block-end: 0;
-  margin-inline-start: 0;
-  margin-inline-end: 0;
-  font-weight: normal;
-  border: 10px solid #000;
-  background: #000000;
-  filter:invert(1);
-  text-align: center;
-  overflow: hidden;
-  font-size: 15px; */
-}
-
-
-
-/* .BlockInner__Text {  
-  position: relative;
-  top: 50%;
-  transform: translate(0, -50%);
-  width: 100%;
-  max-height: 200px;
-  text-align: center;
-  overflow:hidden;
-} */
-
-
-/* .BlockInner__Text p {
-  width: 100%;
-  max-width: 600px;
-  font-size: 11px;
-} */
-
-.BlockInner__Channel {
-  display: block;
-  padding: 10px;
-  font-size: 11px;
-  letter-spacing: 0.027em;
-  text-transform: uppercase;
-  margin-block-start: 0em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  font-weight: normal;
-  text-transform: uppercase;
-  color: #ffffff;
-  background: #000000;
-  border: 0px solid #000000;
-}
-
-.Block iframe{
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-
-/* Blocks: innner ================================================ */
-
-.BlockInner__Image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.BlockInner__Media {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  padding-top: 56.25%; /* 16:9 Aspect Ratio */
-  background: #000000;
-}
-
-
-/* Elements ================================================ */
-
-img {
-  width: 100%;
-}
-
-video {
-  width: 100%;
-}
-
-@media only screen and (max-width:600px) {   /* For tablets: */
-
-
 }
