@@ -1,0 +1,71 @@
+/* ============================================================= */
+/* Basic */
+/* ============================================================= */
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  font-family: Menlo;
+  font-size: 32px;
+/*   font-size: 13px; */
+  text-transform: uppercase;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+::selection {
+  background: transparent;
+}
+
+input, button {
+  font-family: Menlo;
+  font-size: 32px;
+/*   font-size: 13px; */
+  text-transform: uppercase;
+}
+
+
+/* ============================================================= */
+/* Info */
+/* ============================================================= */
+.info {
+  position: fixed; 
+  top: 10px; 
+  left: 10px; 
+  font-weight: normal;
+  color: black;
+}
+
+
+/* ============================================================= */
+/* About */
+/* ============================================================= */
+
+.about { 
+  display: block;
+  padding-top: 20px; 
+}
+
+.about-btn-tv {
+  display: block; 
+  margin: auto; 
+}
+
+.about-img-arena {
+  display:block; 
+  margin: auto; 
+  width: 250px; 
+  height: auto; 
+  border: 1px solid gray;
+}
