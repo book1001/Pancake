@@ -14,8 +14,9 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
 
-  font-family: Menlo;
-  font-size: 32px;
+  font-family: FKGroteskSemiMonoTrial-Regular,sans-serif;
+  /* font-family: Menlo; */
+  font-size: 30px;
 /*   font-size: 13px; */
   text-transform: uppercase;
 }
@@ -29,8 +30,9 @@ body {
 }
 
 input, button {
-  font-family: Menlo;
-  font-size: 32px;
+  font-family: FKGroteskSemiMonoTrial-Regular,sans-serif;
+  /* font-family: Menlo; */
+  font-size: 30px;
 /*   font-size: 13px; */
   text-transform: uppercase;
 }
