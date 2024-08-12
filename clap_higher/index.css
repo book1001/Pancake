@@ -14,7 +14,8 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
 
-  font-family: FKGroteskSemiMonoTrial-Regular,sans-serif;
+  font-family: HelveticaNeueLTStd-Roman,sans-serif;
+  /* font-family: FKGroteskSemiMonoTrial-Regular,sans-serif; */
   letter-spacing: 0.035em;
   font-size: 26px;
   text-transform: uppercase;
@@ -29,7 +30,8 @@ body {
 }
 
 input, button {
-  font-family: FKGroteskSemiMonoTrial-Regular,sans-serif;
+  font-family: HelveticaNeueLTStd-Roman,sans-serif;
+  /* font-family: FKGroteskSemiMonoTrial-Regular,sans-serif; */
   letter-spacing: 0.035em;
   font-size: 26px;
   text-transform: uppercase;
@@ -62,7 +64,16 @@ input, button {
 
 .about-btn-tv {
   display: block; 
+  width: 100px;
   margin: auto; 
+  background: transparent;
+  border: none;
+  text-align: center;
+}
+  
+.about-btn-tv:hover {
+  cursor: pointer;
+  letter-spacing: -14px;
 }
 
 .about-img-arena {

@@ -1,6 +1,12 @@
 /* font: import ================================================ */
 
 @font-face {
+  font-family: 'HelveticaNeueLTStd-Roman';
+  src: url('font/HelveticaNeueLTStd-Roman.woff') format('woff');
+  src: url('font/HelveticaNeueLTStd-Roman.woff2') format('woff2');
+}
+
+@font-face {
   font-family: 'FKGroteskMonoTrial-Regular';
   src: url('https://toolsupsidedown.com/font/FKGroteskMonoTrial-Regular.woff') format('woff');
   src: url('https://toolsupsidedown.com/font/FKGroteskMonoTrial-Regular.woff2') format('woff2');
@@ -42,7 +48,8 @@
 /* text: default ================================================ */
 
 a {
-  font-family: FKGroteskSemiMonoTrial-Regular,sans-serif;
+  font-family: HelveticaNeueLTStd-Roman,sans-serif;
+  /* font-family: FKGroteskSemiMonoTrial-Regular,sans-serif; */
   letter-spacing: 0.035em;
   font-size: 26px;
   text-transform: uppercase;
