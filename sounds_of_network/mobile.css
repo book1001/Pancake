@@ -1,0 +1,21 @@
+/* font: import ================================================ */
+
+@font-face {
+  font-family: 'FKGroteskMono-Regular';
+  src: url('https://cdn.glitch.global/08331ce4-4c7c-4e45-88fe-2ccea9ea1d74/FKGroteskMonoTrial-Regular.woff?v=1688003555439') format('woff');
+  src: url('https://cdn.glitch.global/08331ce4-4c7c-4e45-88fe-2ccea9ea1d74/FKGroteskMonoTrial-Regular.woff2?v=1688003556639') format('woff2');
+}
+
+
+
+html,body {
+  margin: 0;
+  padding: 0;
+}
+
+iframe {
+  position: fixed;
+  top: 0;
+  left: 0;
+  border: none;
+}
