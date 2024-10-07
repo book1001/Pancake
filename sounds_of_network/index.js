@@ -2,8 +2,8 @@ function scaleIframe() {
   var iframe = document.getElementById('iframeScale');
   var containerWidth = window.innerWidth; 
   var containerHeight = window.innerHeight; 
-  var scaleWidth = containerWidth / 1100; 
-  var scaleHeight = containerHeight / 730; 
+  var scaleWidth = containerWidth / 1180; 
+  var scaleHeight = containerHeight / 760; 
   var scale = Math.min(scaleWidth, scaleHeight); 
 
   // Not smaller than scale 1
