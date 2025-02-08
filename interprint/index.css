@@ -1,0 +1,69 @@
+/* font: import ================================================ */
+
+@font-face {
+  font-family: 'FKGroteskMono-Regular';
+  src: url('https://cdn.glitch.global/08331ce4-4c7c-4e45-88fe-2ccea9ea1d74/FKGroteskMonoTrial-Regular.woff?v=1688003555439') format('woff');
+  src: url('https://cdn.glitch.global/08331ce4-4c7c-4e45-88fe-2ccea9ea1d74/FKGroteskMonoTrial-Regular.woff2?v=1688003556639') format('woff2');
+}
+
+html,body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+
+/* html,body {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  background: black;
+  overflow: hidden;
+}
+
+iframe {
+  width: 1180px;
+  height: 760px;
+  transform-origin: center center;
+  border: none;
+  z-index: 2;
+}
+
+#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+
+h4 {
+  font-family: FKGroteskSemiMono-Regular,sans-serif;
+  font-size: 14.4px;
+  margin-block-start: 0.3em;
+  margin-block-end: 0.3em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: normal;
+  mix-blend-mode: difference;
+  color: white;
+  z-index: 3;
+}
+
+.font-body{
+  font-family: FKGroteskMono-Regular,sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+} */
