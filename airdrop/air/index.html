@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Air–Drop</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  </head>
+
+  <body>
+    <style>
+      html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+     }
+ 
+     iframe {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+       width: 1920px;
+       height: 1080px;
+       border: none;
+     }
+    </style>
+    
+    <iframe id="iframeScale" src="https://wandering3.glitch.me" allow="microphone; camera"></iframe>
+ 
+    <script>
+      function scaleIframe() {
+        var iframe = document.getElementById('iframeScale');
+        var containerWidth = window.innerWidth; 
+        var containerHeight = window.innerHeight; 
+        var scaleWidth = containerWidth / 1920; 
+        var scaleHeight = containerHeight / 1080; 
+        var scale = Math.min(scaleWidth, scaleHeight); 
+
+        // Not smaller than scale 1
+        if (scale < 1) {
+          scale = 1;
+        }
+
+        iframe.style.transform = `translate(-50%, -50%) scale(${scale})`;
+        // iframe.style.width = `${1100 * scale}px`;
+        // iframe.style.height = `${730 * scale}px`;
+      }
+
+      window.addEventListener('resize', scaleIframe); 
+      window.addEventListener('load', scaleIframe); 
+    </script>
+  </body>
+</html>
