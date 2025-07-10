@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fruitful Graduation</title>
+  <link rel="stylesheet" href="font.css">
+  <style type="text/css">
+    html,
+    body {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 32px;
+        /* background: #79766F; */
+        /* background: #cecbc6; */
+        /* background: #fffef6; */
+        /* background: linear-gradient(180deg, rgba(255,254,246,1) 75%, rgba(251,255,116,1) 100%); */
+        overflow: hidden;
+        /* background: #fff7db; */
+        /* font-family:AppleChancery.ttf; */
+    }
+
+    #sentenceOutput {
+      text-align: center;
+    }
+    
+    #text{
+      position: fixed;
+      top: 50px;
+      margin-block-start: 0;
+      font-family: AppleChancery;
+      font-size: 65px;
+      font-weight: bold;
+    }
+
+    .p-bg {
+      position: fixed;
+      bottom: 0;
+      left: 50%;
+      width: 700px;
+      transform: translate(-50%,60px);
+      z-index: 1;
+      /* position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background-image: url("../img/p-bg.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; */
+    }
+    </style>
+</head>
+
+<body>
+  <!-- <div class="p-bg"></div> -->
+
+  <!-- <img class="p-bg" src="../img/p-bg_shell.png"> -->
+  <p id="text"></p>
+  <img id="image" style="margin-top: 140px; width: 600px; background: transparent; z-index:2;">
+
+    <div id="sentenceOutput"></div>
+    <script type="text/javascript" src="graduate.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            position: relative;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .element {
+            position: absolute;
+            bottom: 0;
+            font-size: 20px;
+            padding: 5px;
+        }
+
+        #car {
+            color: red;
+        }
+
+        #city {
+            color: blue;
+        }
+
+        #tree {
+            color: green;
+        }
+
+        #house {
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+    <div id="car" class="element">Car</div>
+    <div id="city" class="element">City</div>
+    <div id="tree" class="element">Tree</div>
+    <div id="house" class="element">House</div>
+
+    <script>
+      function getRandomizedPositions() {
+          const positions = [100, 200, 500, 700];
+          // Shuffle positions array to get random order
+          for (let i = positions.length - 1; i > 0; i--) {
+              const j = Math.floor(Math.random() * (i + 1));
+              [positions[i], positions[j]] = [positions[j], positions[i]];
+          }
+          return positions;
+      }
+
+      function setPosition(elementId, xPosition) {
+          const element = document.getElementById(elementId);
+          
+          element.style.left = `${xPosition}px`;
+          element.style.bottom = `0px`;
+      }
+
+      const randomizedPositions = getRandomizedPositions();
+
+      // Set positions for each element
+      setPosition('car', randomizedPositions[0]);
+      setPosition('city', randomizedPositions[1]);
+      setPosition('tree', randomizedPositions[2]);
+      setPosition('house', randomizedPositions[3]);
+  </script>
+
+    <!-- <script>
+        function getRandomPosition() {
+            const offset = 100; // Avoid placing elements too close to the edges
+            const randomX = Math.floor(Math.random() * (window.innerWidth - offset));
+            const randomY = '0px';
+            return { x: randomX, y: randomY };
+        }
+
+        function setPosition(elementId) {
+            const element = document.getElementById(elementId);
+            const position = getRandomPosition();
+            element.style.left = `${position.x}px`;
+            element.style.bottom = `${position.y}px`;
+        }
+
+        setPosition('car');
+        setPosition('city');
+        setPosition('tree');
+        setPosition('house');
+    </script> -->
+</body>
+</html>

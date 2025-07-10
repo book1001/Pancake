@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fruitful Journey</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+  <!-- css -->
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="sprite.css">
+  <link rel="stylesheet" href="font.css">
+  <!-- <link rel="stylesheet" href="index_media.css"> -->
+
+  <!-- js -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+
+  <div id="location"></div>
+
+  <div id="pancakes">
+    <input type="radio" name="site" onclick="openWebsite('https://pancake.garden/sounds_of_network')">
+    <input type="radio" name="site" onclick="openWebsite('https://solarpanel.scrapthe.world')">
+  </div>
+
+
+
+  <script>
+    function openWebsite(url) {
+      window.open(url, '_blank');
+    }
+  </script>
+
+
+
+  <div class="s1">
+    <div id="sentenceOutput"></div>
+    <!-- <div class="location2">
+      N42.3 W-71.1
+    </div> -->
+    <div class="roomText">
+      I need to get out of here
+    </div>
+
+
+  <div class="room">
+    <pre>
+                                                              ▎
+                                      ▎                       ▎
+  ▄▄▄ DUVETDUVET         ▕▎    ▄▄▄████▄▄▄▄▄                  ▄▎
+ █▓▓▓▓▓▓▓▓▓▓▓▓▓█         ▕▄▄▄▄  ▓        ▓                    ▎  
+ ▓             ▓          ▓  ▓  ▓        ▓                    ▎
+     </pre>
+  </div>
+  </div>
+
+  <div class="train">
+    <img styla="width: 178px; height: 1780px;" src="pp/p-train-c.png">
+    <!-- <pre>
+▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▎  █▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▎  █▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▎  █▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▎   ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▎█▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▎█▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▎█▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ █▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+▓▓▓▓░░░░▓▓▓▓▓▓░░░░▓▓▓▓█▎█▓▓▓▓░░░░▓▓▓▓▓▓░░░░▓▓▓▓▓▓░░░░▓▓▓▓▓▓░░░░▓▓▓▓▓▓░░░░▓▓▓▓█▎█▓▓▓▓░░░░▓▓▓▓▓▓░░░░▓▓▓▓▓▓░░░░▓▓▓▓▓▓░░░░▓▓▓▓▓▓░░░░▓▓▓▓█▎█▓▓▓▓░░░░▓▓▓▓▓▓░░░░▓▓▓▓▓▓░░░░▓▓▓▓▓▓░░░░▓▓▓▓▓▓░░░░▓▓▓▓█▎█▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░▓▓▓▓▓▓░░░░▓▓▓▓
+▓▓▓▓░░░░▓▓▓▓▓▓░░░░▓▓▓▓█▎█▓▓▓▓░░░░▓▓▓▓▓▓░░░░▓▓▓▓▓▓░░░░▓▓▓▓▓▓░░░░▓▓▓▓▓▓░░░░▓▓▓▓█▎█▓▓▓▓░░░░▓▓▓▓▓▓░░░░▓▓▓▓▓▓░░░░▓▓▓▓▓▓░░░░▓▓▓▓▓▓░░░░▓▓▓▓█▎█▓▓▓▓░░░░▓▓▓▓▓▓░░░░▓▓▓▓▓▓░░░░▓▓▓▓▓▓░░░░▓▓▓▓▓▓░░░░▓▓▓▓█▎█▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░▓▓▓▓▓▓░░░░▓▓▓▓█
+▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓█▎█▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓█▎█▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓█▎█▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓█▎█▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓█
+▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓█▎█▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓█▎█▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓█▎█▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓█▎█▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓█
+░░░████████████████████▎█ FROM BOSTON BACKBAY ████████░░░░████████████████████▎█ TO NEW YORK MOYNIHAN ███████░░░░████████████████████▎█ NORTHEAST REGIONAL TRAIN ███░░░░████████████████████▎█████████████░░░░████████████████████
+░░░▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓█▎█▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓█▎█▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓█▎█▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓█▎█▓▓▓▓▓▓▓▓▓▓▓▓░░░░▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓█
+░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▎▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▎▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▎▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▎▓▒▒▒▒▒▒▒▒▒▒▒▒░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▎▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▎▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▎▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▎▓▒▒▒▒▒▒▒▒▒▒▒▒░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+    ▀▓▓▓▀▀▓▓▓▀▀▓▓▓▀   ▎  ▀▓▓▓▀▀▓▓▓▀▓▓▓▀   ▀▓▓▓▀▀▓▓▓▀▀▓▓▓▀   ▀▓▓▓▀▀▓▓▓▀▀▓▓▓▀     ▀▓▓▓▀▀▓▓▓▀▓▓▓▀   ▀▓▓▓▀▀▓▓▓▀▀▓▓▓▀   ▀▓▓▓▀▀▓▓▓▀▀▓▓▓▀     ▀▓▓▓▀▀▓▓▓▀▓▓▓▀   ▀▓▓▓▀▀▓▓▓▀▀▓▓▓▀   ▀▓▓▓▀▀▓▓▓▀▀▓▓▓▀     ▀▓▓▓▀▀▓▓▓▀▓▓▓▀   ▀▓▓▓▀▀▓▓▓▀▀▓▓▓▀
+▀▀▓▀▀▀▓▀▀▀▓▀▀▀▓▀▀▀▓▀▀▀▓▀▀▀▓▀▀▀▀▓▀▀▀▓▀▀▀▓▀▀▀▓▀▀▀▓▀▀▀▓▀▀▀▓▀▀▀▓▀▀▀▓▀▀▀▓▀▀▀▓▀▀▀▓▀▀▀▓▀▀▀▓▀▀▀▓▀▀▀▓▀▀▀▓▀▀▀▓▀▀▀▓▀▀▀▓▀▀▀▓▀▀▀▓▀▀▀▓▀▀▀▓▀▀▀▓▀▀▀▓▀▀▀▓▀▀▀▓▀▀▀▓▀▀▀▓▀▀▀▓▀▀▀▓▀▀▀▓▀▀▀▓▀▀▀▓▀▀▀▓▀▀▀▓▀▀▀▓▀▀▀▓▀▀▀▓▀▀▀▓▀▀▀▓▀▀▀▀▓▀▀▀▓▀▀▀▓▀▀▀▓▀▀▀▓▀▀▀▓▀▀▀▓▀▀▀▓▀▀▀▓▀▀▀
+     </pre> -->
+  </div>
+  </div>
+
+
+  <!-- =============================================== -->
+  <!-- Shortcuts: Random -->
+  <!-- =============================================== -->
+  <!-- <textarea id="shortcuts-text"></textarea>
+  <textarea id="shortcuts-text2"></textarea>
+  <textarea id="shortcuts-text3"></textarea> -->
+  
+  <!-- =============================================== -->
+  <!-- Index -->
+  <!-- =============================================== -->
+     <textarea id="index">
+             _
+          _-'_'-_
+       _-' _____ '-_
+    _-' ___________ '-_
+     |___|||||||||___|
+     |___|||   |||___|
+     |___|||||||o|___|
+     |___|||||||||___|
+     |___|||||||||___|
+     |___|||||||||___|
+    </textarea>
+
+  <!-- <textarea id="index" d>
+█ PANCAKE . GARDEN █
+█ PANCAKE . GARDEN █
+█ PANCAKE . GARDEN █
+█ PANCAKE . GARDEN █
+█ PANCAKE . GARDEN █
+█ PANCAKE . GARDEN █
+█          SCHOOL █
+█          SCHOOL █
+█          SCHOOL █
+█          SCHOOL █
+█          SCHOOL █
+█    FRUIT SCHOOL █
+█ PANCAKE . GARDEN █   █ INDEX █ █      █ INDEX █ █      █ INDEX █ █      █ 11111 █ █ INDEX █ INDEX █ █ INDEX █ INDEX █ █ INDEX █ INDEX █ █ INDEX █ INDEX █ █ INDEX █ INDEX █ █
+  </textarea> -->
+
+  <!-- =============================================== -->
+  <!-- Sky: Animation -->
+  <!-- =============================================== -->
+  <div id="bird">
+    <h4 style="display: none; text-align:center;">BIRD</h4>
+  </div>
+
+  <div id="plane" style="display: none;">
+    <pre>
+          NE
+      PLA
+PLANE PLANE PLANE
+     </pre>
+    <!-- <h4 style="text-align:center;">PLANE</h4> -->
+  </div>
+
+  <!-- <div id="cloud">
+    <pre>
+      ▄▄▄▄▄▄▄    ▄▄▄▄▄
+   ▄▄█▓▓█▓▓█▄ ▄█▓▓█▓▓█▄
+ ▓█▓▓███▓▓█▓▓█▓▓███▓█▓▓█▓▓███▓▓█▓
+▓█▓██▓██▓█▓▓█▓██▓██▓▓█▓▓███▓█▓█▓
+  ▀▀▓▓▓▀▀▓▓▓▓▀▀▀▓▓▓▀▀
+     </pre>
+  </div> -->
+
+  <!-- =============================================== -->
+  <!-- Ground: Animation -->
+  <!-- =============================================== -->
+  <div id="car" style="display: none;">
+    <h4 style="text-align:center;">CAR<br>CAR CAR</h4>
+    <div style="display: flex; justify-content: center;">
+      <input type="radio" checked="checked" style="accent-color: black; margin-right:10px;"><input type="radio" checked="checked" style="accent-color: black;">
+    </div>
+  </div>
+
+  <!-- =============================================== -->
+  <!-- Ground: Random -->
+  <!-- =============================================== -->
+  <!-- <div id="city1" style="position: fixed;">
+    <pre> 
+ ▓ ▓ ▓
+ ▓ ▓ ▓ ░░░░░░░ ▄█▄
+ ▓ ▓ ▓ ░░░░░░░ ▄█▄
+ ▓ ▓ ▓ ░░░░░░░ ▄█▄
+ ▓   ▓ ░░   ░░  ▒
+    </pre>
+  </div>
+
+  <div id="city2" style="position: fixed; width:150px;">
+    <pre>  
+▓▓▓▓▓▓      ▁▄▁
+▓▓▓▓▓▓ ░░░ ▁▄█▄▁
+▓▓▓▓▓▓ ░░░ ▁▄█▄▁
+▓▓▓▓▓▓ ░░░ ▁▄█▄▁
+▓▓  ▓▓ ░ ░   ▒
+    </pre>
+  </div>
+
+  <div id="city3" style="position: fixed; width:150px;">
+    <pre>
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+▒ ▒ ▒ ▒ ▒ ▒ ▒ ▒ ▒ 
+▒ ▒ ▒ ▒ ▒ ▒ ▒ ▒ ▒ 
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 
+▒▒▒▒▒▒▒    ▒▒▒▒▒▒
+    </pre>
+  </div>
+
+  <div id="city4" style="position: fixed; width:150px;">
+    <pre>
+▓ ▓ ▓ ▓       ▁▄▁
+▓ ▓ ▓ ▓ ░░░░ ▁▄█▄▁
+▓ ▓ ▓ ▓ ░░░░ ▁▄█▄▁
+▓ ▓ ▓ ▓ ░░░░ ▁▄█▄▁
+▓ ▓ ▓ ▓ ░  ░   ▒
+    </pre>
+  </div>
+
+  <div id="city5" style="position: fixed; width:150px;">
+    <pre>
+ ░░░░░░░░░  ▁▄▁
+ ░░░░░░░░░ ▁▄█▄▁
+ ░░░░░░░░░ ▁▄█▄▁
+ ░░░░░░░░░ ▁▄█▄▁
+ ░░░   ░░░   ▒
+    </pre>
+  </div>
+
+  <div id="tree1" style="position: fixed;">
+    <pre>
+  ▄█▓▓█▓▓█▄
+ ▓█▓▓███▓▓█▓
+ ▓█▓██░██▓█▓
+   ▀▀▓▒▓▀▀
+      ▒  
+      ▒
+    </pre>
+  </div>
+
+  <div id="tree2" style="position: fixed;">
+    <pre>
+  ▄█▓▓█▓▓█▄
+ ▓█▓▓███▓▓█▓
+ ▓█▓██░██▓█▓
+   ▀▀▓▒▓▀▀
+      ▒  
+      ▒
+    </pre>
+  </div> -->
+
+  <!-- <div id="city1" style="position: fixed;">
+    <pre>
+             _
+          _-'_'-_
+       _-' _____ '-_
+    _-' ___________ '-_
+     |___|||||||||___|
+     |___|||||||||___|
+     |___|||||||o|___|
+     |___|||||||||___|
+     |___|||||||||___|
+     |___|||||||||___|
+  </pre>
+  </div> -->
+  
+
+  <!-- =============================================== -->
+
+
+
+  <!-- <div style="border-width: 2px; border-style: inset; border-color: initial;"></div> -->
+
+  <div id="spritePosition">
+    <div class="sprite right"></div>
+  </div>
+  
+
+  <!-- <div class="panel">
+    <div class="temp">ºF</div>
+    <div class="weather"></div>
+  </div> -->
+
+  <!-- js -->
+  <script type="text/javascript" src="shortcuts.js"></script>
+  <!-- <script type="text/javascript" src="name.js"></script> -->
+  <script type="text/javascript" src="ground.js"></script>
+  <script type="text/javascript" src="keyin.js"></script>
+  <script type="text/javascript" src="weather.js"></script>
+  <script type="text/javascript" src="sprite.js"></script>
+  <script type="text/javascript" src="index_media.js"></script>
+</body>
+</html>
