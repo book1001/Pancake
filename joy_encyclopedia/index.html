@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>An Encyclopedia of Black Joy</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- <meta http-equiv="Content-type" content="text/html;charset=UTF-8"> -->
+    <!-- <link rel="shortcut icon" href="favicon.png"> -->
+
+    <!-- css -->
+    <link rel="stylesheet" href="font.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index_detail.css">
+    <link rel="stylesheet" href="index_media.css">
+
+    <!-- script: index_ie.js -->
+    <script type="text/javascript" src="index_ie.js"></script>
+
+    <!-- script: Masonry -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+
+    <!-- Are.na routing  -->
+    <script src="//unpkg.com/navigo"></script>
+
+    <!-- script: jszip -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+
+    <!-- script: jspdf -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    
+  </head>
+
+  <body>
+
+    <style>
+      body {
+        font-family: Helvetica, sans-serif;
+      }
+      .ChannelContents {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 10px;
+      }
+
+      /* FULL VIEW */
+      .ChannelContents.full {
+        grid-template-columns: 1fr;
+      }
+
+
+      /* 캔버스 */
+      canvas {
+        width: 100%;
+        display: block;
+        cursor: pointer;
+      }
+
+      .thumbBox {
+        width: 200px;
+        height: 200px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .thumbBox canvas {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%) scale(1.2);
+      }
+      /* -------- MODAL -------- */
+      .Modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.9);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+        overflow-x: hidden;
+        overflow-y: auto;
+      }
+
+      .Modal.active {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .ModalInner {
+        max-width: 70%;
+        max-height: 90%;
+      }
+
+      .modalContent {
+        color: white;
+      }
+    </style>
+
+    <p>
+      An Encyclopedia of Black Joy is a living, open-source archive that draws from W.E.B. Du Bois's Encyclopedia Africana to imagine an entirely different kind of knowledge database. One that challenges institutional authority and limitation, to enmesh empirical knowledge that is embodied, collected, and ongoing; a means to preserve the inexhaustible experience of Black joy.
+      This project has no end.  Structured digitally as an open-source web platform, the encyclopedia's content is conceived, curated, and authored by and through gatherings of Black people. Be it conversations, dinners, workshops, readings, and other forms of communion that generate entries not as data points but as living documents. When community and social context demand it, the platform is coded to produce printed volumes: books that exist as artifacts of a particular moment and group of people, open-source and freely reproducible.
+    </p>
+    
+    <div class="h-top"></div>
+    <!-- <div class="ChannelInfo" style="mix-blend-mode: difference;">
+      <a href="https://www.are.na/platform-9-ctc-1000-103/magic-spells-2" target="_blank">
+        <h3>1.5 Fri // Magic Spells 2</h3>
+      </a>
+      <br>
+    </div> -->
+
+    <div class="Controls" style="padding-bottom: 20px;">
+      <button id="thumbBtn">Thumbnail</button>
+      <button id="fullBtn">Full</button>
+    </div>
+
+    <div class="Modal" id="modal">
+      <button id="exportPDFBtn">Riso Separation</button>
+      <!-- <button id="save">Save</button> -->
+      <div class="ModalInner" id="modalInner"></div>
+    </div>
+
+
+
+
+    <div class="ChannelContents"></div>
+    <div class="ScrollMaker" style="position: absolute; top: 0; width: 0; height: calc(100% + 10px);"></div>
+
+    <script>let slug = 'test-joy';</script>
+    
+    <!-- script ================================================================== -->
+     <script defer src="index.js"></script>
+    <!-- <script type="text/javascript" src="index.js"></script> -->
+  </body>
+</html>
